@@ -1,0 +1,15 @@
+#{{{ GOLANG 
+export GOPATH=$HOME/Projects/data/go
+export PATH=$GOPATH/bin:$PATH
+#}}}
+#{{{RUST
+export PATH=$HOME/.cargo/bin:$PATH
+#}}}
+### YARN BIN {
+export PATH=$PATH:$HOME/.yarn/bin
+###}
+#
+#{{{ BUILD Tools
+## Don't use all my cores please .... :D
+export MAKEFLAGS='-j 7'
+# }}}

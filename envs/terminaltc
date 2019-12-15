@@ -1,0 +1,4 @@
+export GPG_TTY=$(tty)
+
+# 10ms for key sequences
+KEYTIMEOUT=1
