@@ -33,10 +33,21 @@ function load_envs {
   source $HOME/.dotfiles/envs/developmentrc
 }
 
+function load_pywal {
+  # Import colorscheme from 'wal' asynchronously
+  # &   # Run the process in the background.
+  # ( ) # Hide shell job control messages.
+  (cat ~/.cache/wal/sequences &)
+
+  # To add support for TTYs this line can be optionally added.
+  source ~/.cache/wal/colors-tty.sh
+}
+
 run_antibody
 run_starship
 load_aliases
 load_envs
+#load_pywal
 
 #set +e # DEBUGGING PURPOSE ONLY
 eval  "$(starship init zsh)"

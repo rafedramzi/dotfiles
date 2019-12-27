@@ -9,5 +9,6 @@
 
 " SHORTCUTS
 nmap <leader>ne :NERDTreeTabsToggle<cr>
+nmap <leader>nr :NERDTreeFind<cr>
 nmap <F3> :NERDTreeTabsToggle<cr>
 

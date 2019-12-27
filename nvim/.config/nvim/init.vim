@@ -20,4 +20,6 @@ source ~/.config/nvim/settings_nerdtree.vim
 source ~/.config/nvim/settings_tagbar.vim
 source ~/.config/nvim/settings_neomake.vim
 source ~/.config/nvim/my-keystrokes.vim
+source ~/.config/nvim/settings_rust-vim.vim
+source ~/.config/nvim/settings_vim-racer.vim
 

@@ -1,0 +1,11 @@
+[Unit]
+Description=Start jupyter notebook service
+After=network.target
+
+[Service]
+# Systemd Specifiers: https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Specifiers
+Environment="JUPYTERNOTEBOOK_DIR=%h/Projects/jupyter/notebook"
+ExecStart=/usr/bin/jupyter-notebook --notebook-dir=${JUPYTERNOTEBOOK_DIR}
+
+[Install]
+WantedBy=multi-user.target

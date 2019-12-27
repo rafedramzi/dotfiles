@@ -2,3 +2,9 @@ export GPG_TTY=$(tty)
 
 # 10ms for key sequences
 KEYTIMEOUT=1
+
+# COLORIZE LESS OUTPUT
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+
+export PATH=$HOME/bin:$PATH
