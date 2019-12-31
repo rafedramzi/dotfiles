@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 "{{{ RUST
 Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
+"Plug 'racer-rust/vim-racer'
 "}}}
 "{{{ GOLANG
 Plug 'fatih/vim-go'
