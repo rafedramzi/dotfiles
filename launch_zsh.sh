@@ -26,6 +26,7 @@ function run_starship {
 
 function load_aliases {
   source $HOME/.dotfiles/aliases/terminal
+  source $HOME/.dotfiles/aliases/utils
 }
 
 function load_envs {
