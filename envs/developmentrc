@@ -18,3 +18,4 @@ export PATH=$PATH:$HOME/.yarn/bin
 ## Don't use all my cores please .... :D
 export MAKEFLAGS='-j 7'
 # }}}
+export PATH=$HOME/.local/bin:$PATH

@@ -23,6 +23,10 @@ Plug 'tpope/vim-abolish'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/emmet-vim'
 "}}}
+"{{{ JULIA
+Plug 'juliaeditorsupport/julia-vim'
+"Plug 'julialang/julia-vim'
+"}}}
 "{{{ Others
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
