@@ -1,5 +1,7 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "coc.preferences.hoverTarget": "float",
+  "signature.target": "float",
   "languageserver": {
     "julia": {
       "command": "/usr/bin/julia",
@@ -28,7 +30,7 @@
       }
     },
     "rust": {
-      "command": "ra_lsp_server",
+      "command": "rls",
       "filetypes": ["rust"],
       "rootPatterns": ["Cargo.toml"]
     },

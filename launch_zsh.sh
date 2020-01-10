@@ -52,3 +52,4 @@ load_envs
 
 #set +e # DEBUGGING PURPOSE ONLY
 eval  "$(starship init zsh)"
+eval "$(direnv hook zsh)"
