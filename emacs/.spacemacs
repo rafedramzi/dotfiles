@@ -38,7 +38,19 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
+
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-complete-with-key-sequence nil
+                      auto-completion-complete-with-key-sequence-delay 0.1
+                      auto-completion-idle-delay 0.2
+                      auto-completion-private-snippets-directory nil
+                      auto-completion-enable-snippets-in-popup nil
+                      auto-completion-use-company-box nil
+                      auto-completion-enable-sort-by-usage t)
      better-defaults
      emacs-lisp
      git
@@ -68,7 +80,7 @@ This function should only modify configuration layer settings."
      javascript
      latex
      lua
-     rust
+     (rust :variables rust-backend 'lsp)
      scala
      typescript
      julia
@@ -517,7 +529,7 @@ This function is called at the very end of Spacemacs initialization."
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (dracula-theme xterm-color vterm terminal-here shell-pop multi-term ivy-rtags google-c-style flycheck-ycmd flycheck-rtags eshell-z eshell-prompt-extras esh-help disaster cquery cpp-auto-include company-ycmd ycmd request-deferred deferred company-rtags rtags company-c-headers clang-format ccls dap-mode bui tree-mode moe-theme yasnippet-snippets unfill treemacs-magit smeargle mwim magit-svn magit-gitflow magit-popup helm-gitignore helm-git-grep helm-company helm-c-yasnippet gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip evil-magit magit git-commit with-editor transient company-statistics auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete vmd-mode mmm-mode markdown-toc markdown-mode gh-md emoji-cheat-sheet-plus company-emoji company ws-butler writeroom-mode winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package treemacs-projectile toc-org symon symbol-overlay string-inflection spaceline-all-the-icons restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox overseer org-plus-contrib org-bullets open-junk-file nameless move-text macrostep lorem-ipsum link-hint indent-guide hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-ls-git helm-flx helm-descbinds helm-ag google-translate golden-ratio font-lock+ flycheck-package flycheck-elsa flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline diminish devdocs define-word column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line))))
+    (company-quickhelp dracula-theme xterm-color vterm terminal-here shell-pop multi-term ivy-rtags google-c-style flycheck-ycmd flycheck-rtags eshell-z eshell-prompt-extras esh-help disaster cquery cpp-auto-include company-ycmd ycmd request-deferred deferred company-rtags rtags company-c-headers clang-format ccls dap-mode bui tree-mode moe-theme yasnippet-snippets unfill treemacs-magit smeargle mwim magit-svn magit-gitflow magit-popup helm-gitignore helm-git-grep helm-company helm-c-yasnippet gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip evil-magit magit git-commit with-editor transient company-statistics auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete vmd-mode mmm-mode markdown-toc markdown-mode gh-md emoji-cheat-sheet-plus company-emoji company ws-butler writeroom-mode winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package treemacs-projectile toc-org symon symbol-overlay string-inflection spaceline-all-the-icons restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox overseer org-plus-contrib org-bullets open-junk-file nameless move-text macrostep lorem-ipsum link-hint indent-guide hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-ls-git helm-flx helm-descbinds helm-ag google-translate golden-ratio font-lock+ flycheck-package flycheck-elsa flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline diminish devdocs define-word column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
