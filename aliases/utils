@@ -1,1 +1,2 @@
 alias susr="systemctl --user"
+alias rust-repl="evcxr"
