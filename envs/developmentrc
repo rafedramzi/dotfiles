@@ -2,9 +2,11 @@
 export JUPYTERLAB_DIR=$HOME/Projects/jupyter/lab
 export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
 export JUPYTERNOTEBOOK_DIR=$HOME/Projects/jupyter/notebook
+export PATH="$HOME/.emacs.d/bin:$PATH"
 #}}}
 #{{{ GOLANG 
 export GOPATH=$HOME/Projects/data/go
+export GOSUMDB=https://sum.golang.org
 export PATH=$GOPATH/bin:$PATH
 #}}}
 #{{{RUST
