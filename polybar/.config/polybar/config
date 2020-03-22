@@ -29,25 +29,27 @@ wrapping-scroll = false
 strip-wsnumbers = true
 pin-workspaces = true
 
-label-focused = "%icon%%name%"
+#label-focused = "%icon%%name%"
+label-focused = "%icon%%{F}%name%%{F-}"
 label-focused-background = ${colors.background}
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = ${colors.background-alt}
 label-focused-padding = 3
-label-focused-underline = ${colors.foreground-alt}
+label-focused-underline = ${colors.alert}
 
-label-unfocused = "%icon%%name%"
+label-unfocused = "%icon%%{F}%name%%{F-}"
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.background-alt}
 label-unfocused-padding = 3
 label-unfocused-underline = ${colors.background}
 
-label-urgent = "%icon%%name%"
+
+label-urgent = "%icon%%{F}%name%%{F-}"
 label-urgent-background = ${colors.background}
-label-urgent-foreground = ${colors.foreground-alt}
+label-urgent-foreground = ${colors.alert}
 label-urgent-padding = 3
 label-urgent-underline = ${colors.background}
 
-label-visible = "%icon%%name%"
+label-visible = "%icon%%{F}%name%%{F-}"
 label-visible-background = ${colors.background}
 label-visible-foreground = ${colors.foreground}
 label-visible-padding = 3
@@ -138,6 +140,26 @@ label = %date% %time%
 
 [module/alsa]
 type = internal/alsa
+
+format-volume = <ramp-volume><label-volume>
+label-volume = "%percentage%"
+ramp-volume-0 =" "
+ramp-volume-1 =" "
+ramp-volume-2 =" "
+ramp-volume-3 =" "
+label-volume-foreground = ${colors.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground}
+label-muted = muted
+label-muted-foreground = ${colors.foreground}
+
+[module/volume]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_05_00.6.analog-stereo
 
 format-volume = <ramp-volume><label-volume>
 label-volume = "%percentage%"
