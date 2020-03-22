@@ -4,13 +4,13 @@ set first-page-column 1:1
 
 #set recolor-darkcolor \#839496
 #
-set font "monospace normal 14"
-map <C-i> recolor
+#set font "monospace normal 14"
+#map <C-i> recolor
 # SOURCE:  https://github.com/esn89/base16-zathura/blob/master/zathurarc-dark
 # {{{
 # zathurarc-dark
 
-set font                        "inconsolata 14"
+set font                        "inconsolata 12"
 set default-bg                  "#B0B0B0" #00
 set default-fg                  "#202020" #01
 
