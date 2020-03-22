@@ -4,16 +4,20 @@ export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
 export JUPYTERNOTEBOOK_DIR=$HOME/Projects/jupyter/notebook
 export PATH="$HOME/.emacs.d/bin:$PATH"
 #}}}
+#{{{FLUTTER
+export PATH=$PATH:$HOME/Projects/SDK/flutter/bin
+#}}}
 #{{{ GOLANG 
 export GOPATH=$HOME/Projects/data/go
-export GOSUMDB=https://sum.golang.org
-export PATH=$GOPATH/bin:$PATH
+#export GOSUMDB=https://sum.golang.org
+export PATH=$PATH:$GOPATH/bin
 #}}}
 #{{{RUST
 export PATH=$HOME/.cargo/bin:$PATH
 #}}}
-### YARN BIN {
+### NODE BIN {
 export PATH=$PATH:$HOME/.yarn/bin
+export PATH=$PATH:$HOME/.pnpm/bin
 ###}
 #### PYTHON {
 

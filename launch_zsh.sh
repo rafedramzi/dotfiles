@@ -45,11 +45,11 @@ function load_pywal {
 }
 
 run_antibody
-run_starship
+#run_starship
 load_aliases
 load_envs
 #load_pywal
 
 #set +e # DEBUGGING PURPOSE ONLY
-eval  "$(starship init zsh)"
+#eval  "$(starship init zsh)"
 eval "$(direnv hook zsh)"
