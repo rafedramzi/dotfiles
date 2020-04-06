@@ -10,6 +10,8 @@ zsh-users/zsh-history-substring-search
 robbyrussell/oh-my-zsh folder:plugins/common-aliases
 robbyrussell/oh-my-zsh path:plugins/colored-man-pages
 robbyrussell/oh-my-zsh folder:plugins/git
+robbyrussell/oh-my-zsh folder:plugins/docker
+robbyrussell/oh-my-zsh folder:plugins/docker-compose
 
 # SPACESHIP PROMPT
 #denysdovhan/spaceship-prompt
