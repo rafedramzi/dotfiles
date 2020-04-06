@@ -5,6 +5,7 @@ Plug 'rust-lang/rust.vim'
 "}}}
 "{{{ GOLANG
 Plug 'fatih/vim-go'
+Plug 'udalov/kotlin-vim'
 "}}}
 "{{{ LSP
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
@@ -34,6 +35,7 @@ Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
 "}}}
 "{{{ THEME
+Plug 'arzg/vim-colors-xcode'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'nanotech/jellybeans.vim'

@@ -12,5 +12,8 @@ augroup END
 
 set background=dark
 " colorscheme PaperColor
-" colorscheme dracula
-colorscheme jellybeans
+"set termguicolors
+"" colorscheme dracula
+" colorscheme jellybeans
+" colorscheme xcodedark
+colorscheme xcodedarkhc
