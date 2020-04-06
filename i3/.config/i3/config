@@ -151,16 +151,16 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-bindsym $mod1+1 workspace number $ws11
-bindsym $mod1+2 workspace number $ws12
-bindsym $mod1+3 workspace number $ws13
-bindsym $mod1+4 workspace number $ws14
-bindsym $mod1+5 workspace number $ws15
-bindsym $mod1+6 workspace number $ws16
-bindsym $mod1+7 workspace number $ws17
-bindsym $mod1+8 workspace number $ws18
-bindsym $mod1+9 workspace number $ws19
-bindsym $mod1+0 workspace number $ws20
+bindsym $mod+F1 workspace number $ws11
+bindsym $mod+F2 workspace number $ws12
+bindsym $mod+F3 workspace number $ws13
+bindsym $mod+F4 workspace number $ws14
+bindsym $mod+F5 workspace number $ws15
+bindsym $mod+F6 workspace number $ws16
+bindsym $mod+F7 workspace number $ws17
+bindsym $mod+F8 workspace number $ws18
+bindsym $mod+F9 workspace number $ws19
+bindsym $mod+F0 workspace number $ws20
 
 bindsym $mod+x move workspace to output left
 
@@ -176,16 +176,16 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-bindsym $mod1+Shift+1 move container to workspace number $ws11
-bindsym $mod1+Shift+2 move container to workspace number $ws12
-bindsym $mod1+Shift+3 move container to workspace number $ws13
-bindsym $mod1+Shift+4 move container to workspace number $ws14
-bindsym $mod1+Shift+5 move container to workspace number $ws15
-bindsym $mod1+Shift+6 move container to workspace number $ws16
-bindsym $mod1+Shift+7 move container to workspace number $ws17
-bindsym $mod1+Shift+8 move container to workspace number $ws18
-bindsym $mod1+Shift+9 move container to workspace number $ws19
-bindsym $mod1+Shift+0 move container to workspace number $ws20
+bindsym $mod+Shift+F1 move container to workspace number $ws11
+bindsym $mod+Shift+F2 move container to workspace number $ws12
+bindsym $mod+Shift+F3 move container to workspace number $ws13
+bindsym $mod+Shift+F4 move container to workspace number $ws14
+bindsym $mod+Shift+F5 move container to workspace number $ws15
+bindsym $mod+Shift+F6 move container to workspace number $ws16
+bindsym $mod+Shift+F7 move container to workspace number $ws17
+bindsym $mod+Shift+F8 move container to workspace number $ws18
+bindsym $mod+Shift+F9 move container to workspace number $ws19
+bindsym $mod+Shift+F0 move container to workspace number $ws20
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -204,8 +204,7 @@ mode "resize" {
         # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -243,30 +242,36 @@ assign [class="^firefox"] $ws1
 assign [class="^chromium"] $ws1
 # 2 - TERMINAL
 # 3 - EDITOR
-assign [class="^Code"] $ws3
-assign [class="^Code\ -\ Insiders"] $ws3
-assign [class="^atom"] $ws3
-assign [class="^emacs"] $ws3
-assign [class="^nvim-qt"] $ws3
+for_window [class="^Code"] move to workspace $ws3
+for_window [class="^jetbrains-studio"] move to workspace $ws3
+for_window [class="^code-oss"] move to workspace $ws3
+for_window [class="^Code\ -\ Insiders"] move to workspace $ws3
+for_window [class="^atom"] move to workspace $ws3
+for_window [class="^emacs"] move to workspace $ws3
+for_window [class="^nvim-qt"] move to workspace $ws3
 # 4- DevTools
 assign [class="^insomnia"] $ws4
 assign [class="^postman"] $ws4
 assign [class="^MongoDB\ Compass"] $ws4
 assign [class="^Altair"] $ws4
-# 6- Chat and Contact
-assign [class="^Slack"] $ws6
-assign [class="^Discord"] $ws6
-assign [class="^Station"] $ws6
-assign [class="^Mailspring"] $ws6
+# 5 - BOOKS
+assign [class="calibre"] $ws5
+# 7- Chat and Contact
+assign [class="^Slack"] $ws7
+assign [class="^Discord"] $ws7
+assign [class="^Station"] $ws7
+assign [class="^Mailspring"] $ws7
 # 7 - Stuff
 assign [class="^GNU\ Octave"] $ws17
-
 # 9 - SECRET
 assign [class="^keepass"] $ws9
+#Conference
+assign [class="^zoom"] $ws12
 #Note Writing
 assign [class="^Boostnote"] $ws14
-# 15 - BOOKS
-assign [class="calibre"] $ws15
+#ify
+for_window [class="Spotify"] move to workspace $ws18
+for_window [class="ify"] move to workspace $ws18
 
 
 
