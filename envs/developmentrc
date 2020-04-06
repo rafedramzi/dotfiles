@@ -1,3 +1,4 @@
+export EDITOR=nvim
 #{{{ ETC
 export JUPYTERLAB_DIR=$HOME/Projects/jupyter/lab
 export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
@@ -46,3 +47,8 @@ export PATH=$PATH:$HOME/.pnpm/bin
 export MAKEFLAGS='-j 7'
 # }}}
 export PATH=$HOME/.local/bin:$PATH
+
+
+# AVOID
+alias npm="echo Use pnpm instead!"
+alias yarn=npm
