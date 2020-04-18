@@ -16,7 +16,7 @@ mount-1 = /media/mediabarbosa
 
 label-mounted =  %percentage_free%%
 label-unmounted = %mountpoint%: not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-unmounted-foreground = ${colors.foreground}
 
 [module/i3]
 type = internal/i3
@@ -32,13 +32,13 @@ pin-workspaces = true
 #label-focused = "%icon%%name%"
 label-focused = "%icon%%{F}%name%%{F-}"
 label-focused-background = ${colors.background}
-label-focused-foreground = ${colors.background-alt}
+label-focused-foreground = ${colors.foreground}
 label-focused-padding = 3
 label-focused-underline = ${colors.alert}
 
 label-unfocused = "%icon%%{F}%name%%{F-}"
 label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.background-alt}
+label-unfocused-foreground = ${colors.foreground}
 label-unfocused-padding = 3
 label-unfocused-underline = ${colors.background}
 
