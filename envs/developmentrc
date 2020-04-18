@@ -49,6 +49,3 @@ export MAKEFLAGS='-j 7'
 export PATH=$HOME/.local/bin:$PATH
 
 
-# AVOID
-alias npm="echo Use pnpm instead!"
-alias yarn=npm

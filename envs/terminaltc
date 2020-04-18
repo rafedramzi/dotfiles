@@ -4,6 +4,7 @@ export GPG_TTY=$(tty)
 KEYTIMEOUT=1
 
 # COLORIZE LESS OUTPUT
+BAT_THEME=zenburn
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 
@@ -15,3 +16,4 @@ bindkey '\eb' emacs-backward-word
 
 bindkey "^[[1;5C" emacs-forward-word # ^[^[[C For OSX
 bindkey "^[[1;5D" emacs-backward-word # ^[^[[D FOR OSX
+
