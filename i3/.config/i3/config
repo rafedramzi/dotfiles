@@ -230,7 +230,8 @@ workspace_auto_back_and_forth yes
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id compton
-exec --no-startup-id variety
+#exec --no-startup-id variety
+exec --no-startup-id ~/.fehbg
 
 default_border none
 
@@ -242,13 +243,13 @@ assign [class="^firefox"] $ws1
 assign [class="^chromium"] $ws1
 # 2 - TERMINAL
 # 3 - EDITOR
-for_window [class="^Code"] move to workspace $ws3
-for_window [class="^jetbrains-studio"] move to workspace $ws3
-for_window [class="^code-oss"] move to workspace $ws3
-for_window [class="^Code\ -\ Insiders"] move to workspace $ws3
-for_window [class="^atom"] move to workspace $ws3
-for_window [class="^emacs"] move to workspace $ws3
-for_window [class="^nvim-qt"] move to workspace $ws3
+assign [class="^code-oss"] $ws3
+assign [class="^Code"]  $ws3
+assign [class="^jetbrains-studio"]  $ws3
+assign [class="^Code\ -\ Insiders"]  $ws3
+assign [class="^atom"]  $ws3
+assign [class="^emacs"]  $ws3
+assign [class="^nvim-qt"]  $ws3
 # 4- DevTools
 assign [class="^insomnia"] $ws4
 assign [class="^postman"] $ws4
@@ -256,21 +257,23 @@ assign [class="^MongoDB\ Compass"] $ws4
 assign [class="^Altair"] $ws4
 # 5 - BOOKS
 assign [class="calibre"] $ws5
-# 7- Chat and Contact
-assign [class="^Slack"] $ws7
-assign [class="^Discord"] $ws7
-assign [class="^Station"] $ws7
-assign [class="^Mailspring"] $ws7
-# 7 - Stuff
-assign [class="^GNU\ Octave"] $ws17
+# 8 - Emails
+for_window [class="^Evolution"] move to workspace $ws8
 # 9 - SECRET
-assign [class="^keepass"] $ws9
+for_window [class="^keepass"] move to workspace $ws9
 #Conference
-assign [class="^zoom"] $ws12
+for_window [class="^zoom"] move to workspace $ws12
+# 13- Chat and Contact
+for_window [class="^Slack"] move to workspace $ws13
+for_window [class="^Discord"] move to workspace $ws13
+for_window [class="^Station"] move to workspace $ws13
+for_window [class="^Mailspring"] move to workspace $ws13
 #Note Writing
-assign [class="^Boostnote"] $ws14
+for_window [class="^Boostnote"] move to workspace $ws14
+# 17 - Stuff
+for_window [class="^GNU\ Octave"] move to workspace $ws17
 #ify
-for_window [class="Spotify"] move to workspace $ws18
+for_window [class="Spotify"]  move to workspace $ws18
 for_window [class="ify"] move to workspace $ws18
 
 
