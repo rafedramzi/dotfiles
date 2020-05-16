@@ -17,7 +17,7 @@ set $alt_menu rofi -show combi
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 12
+font pango:monospace 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -240,7 +240,7 @@ default_border none
 # ASSIGNS
 # 1 - BROWSERS
 assign [class="^firefox"] $ws1
-assign [class="^chromium"] $ws1
+assign [class="^Chromium"] $ws1
 # 2 - TERMINAL
 # 3 - EDITOR
 assign [class="^code-oss"] $ws3
@@ -250,6 +250,7 @@ assign [class="^Code\ -\ Insiders"]  $ws3
 assign [class="^atom"]  $ws3
 assign [class="^emacs"]  $ws3
 assign [class="^nvim-qt"]  $ws3
+#assign [name="^Gonvim"]  $ws3
 # 4- DevTools
 assign [class="^insomnia"] $ws4
 assign [class="^postman"] $ws4
@@ -258,23 +259,23 @@ assign [class="^Altair"] $ws4
 # 5 - BOOKS
 assign [class="calibre"] $ws5
 # 8 - Emails
-for_window [class="^Evolution"] move to workspace $ws8
+assign [class="^Evolution"] $ws8
 # 9 - SECRET
-for_window [class="^keepass"] move to workspace $ws9
+assign [class="^keepass"] $ws9
 #Conference
-for_window [class="^zoom"] move to workspace $ws12
+assign [class="^zoom"] $ws12
 # 13- Chat and Contact
-for_window [class="^Slack"] move to workspace $ws13
-for_window [class="^Discord"] move to workspace $ws13
-for_window [class="^Station"] move to workspace $ws13
-for_window [class="^Mailspring"] move to workspace $ws13
+assign [class="^Slack"] $ws13
+assign [class="^Discord"] $ws13
+assign [class="^Station"] $ws13
+assign [class="^Mailspring"] $ws13
 #Note Writing
-for_window [class="^Boostnote"] move to workspace $ws14
+assign [class="^Boostnote"] $ws14
 # 17 - Stuff
-for_window [class="^GNU\ Octave"] move to workspace $ws17
+assign [class="^GNU\ Octave"] $ws17
 #ify
-for_window [class="Spotify"]  move to workspace $ws18
-for_window [class="ify"] move to workspace $ws18
+assign [class="Spotify"]  $ws18
+assign [class="ify"] $ws18
 
 
 
@@ -299,5 +300,55 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 # PRINT SCREEEN
-bindsym --release Print "exec maim -s | xclip -selection clipboard -t image/png
+bindsym --release Print exec maim -B -u -s | xclip -selection clipboard -t image/png
+bindsym --release Shift+Print exec maim -B -u -i $(xdotool getactivewindow) ~/Pictures/screenshots/screenshot-$(date '+%Y-%m-%d-%H:%M:%S').png
+
+## Base16 oomox-StValentino
+# Author: oomox-StValentino
+#
+# You can use these variables anywhere in the i3 configuration file.
+
+set $base00 #fff9f9
+set $base01 #0b0000
+set $base02 #818585
+set $base03 #918b8a
+set $base04 #ffffff
+set $base05 #241f1c
+set $base06 #e5d9d9
+set $base07 #d1d2cc
+set $base08 #d42434
+set $base09 #bda94a
+set $base0A #f3ce84
+set $base0B #4b5617
+set $base0C #3ca9ab
+set $base0D #5b7a84
+set $base0E #f9c0df
+set $base0F #b4522b
+
+## Basic bar configuration using the Base16 variables.
+#bar {
+#    status_command i3status
+#
+#    colors {
+#        background $base00
+#        separator  $base01
+#        statusline $base04
+#
+#        # State             Border  BG      Text
+#        focused_workspace   $base05 $base0D $base00
+#        active_workspace    $base05 $base03 $base00
+#        inactive_workspace  $base03 $base01 $base05
+#        urgent_workspace    $base08 $base08 $base00
+#        binding_mode        $base00 $base0A $base00
+#    }
+#}
+
+# Basic color configuration using the Base16 variables for windows and borders.
+# Property Name         Border  BG      Text    Indicator Child Border
+client.focused          $base05 $base0D $base00 $base0D $base0C
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.urgent           $base08 $base08 $base00 $base08 $base08
+client.placeholder      $base00 $base00 $base05 $base00 $base00
+client.background       $base07
 
