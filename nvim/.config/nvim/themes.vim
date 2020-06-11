@@ -11,9 +11,14 @@ augroup END
 " SOURCE END
 
 set background=dark
-" colorscheme PaperColor
+colorscheme PaperColor
 "set termguicolors
-"" colorscheme dracula
+" colorscheme dracula
 " colorscheme jellybeans
 " colorscheme xcodedark
-colorscheme xcodedarkhc
+" colorscheme xcodedarkhc
+
+"" MOLOKAI: Choose one of them
+" let g:molokai_original = 1
+" let g:rehash256 = 1
+

@@ -8,14 +8,18 @@ Plug 'fatih/vim-go'
 Plug 'udalov/kotlin-vim'
 "}}}
 "{{{ LSP
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "}}}
 "{{{ NAVIGATION
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'majutsushi/tagbar'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'liuchengxu/vista.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'qpkorr/vim-bufkill'
+"Plug 'majutsushi/tagbar'
+"Plug 'ctrlpvim/ctrlp.vim'
 "}}}
 "{{{ TYPINGS
 Plug 'tpope/vim-surround'
@@ -33,14 +37,16 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
+Plug 'vim-airline/vim-airline'
+Plug 'nathanaelkane/vim-indent-guides'
 "}}}
 "{{{ THEME
 Plug 'arzg/vim-colors-xcode'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'nanotech/jellybeans.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'artanikin/vim-synthwave84'
+Plug 'tomasr/molokai'
 "}}}
 "{{{ SYNTAX
 Plug 'neomake/neomake'

@@ -32,11 +32,11 @@
     "rust": {
       "command": "rls",
       "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
+      "rootPatterns": ["Cargo.toml", "main.rs"]
     },
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/", ".projectile"],
+      "rootPatterns": ["go.mod"],
       "filetypes": ["go"]
     }
   }
