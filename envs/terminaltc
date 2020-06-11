@@ -1,3 +1,5 @@
+export SOCK_FOLDER=$HOME/.local
+export NVIM_SOCK=$SOCK_FOLDER/nvim.sock
 export GPG_TTY=$(tty)
 
 # 10ms for key sequences

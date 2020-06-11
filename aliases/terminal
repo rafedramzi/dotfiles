@@ -1,3 +1,4 @@
 #alias ls=exa
 alias vim=nvim
+alias nvim-qt="nvim-qt --server $HOME/.local/nvim.sock"
 alias ec=emacsclient
