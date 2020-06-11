@@ -1,0 +1,99 @@
+# This is a basic configuration example for SpaceVim
+
+# All SpaceVim options are below [options] snippet
+[options]
+#colorscheme = "xcodedark"
+    colorscheme = "PaperColor"
+    colorscheme_bg = "dark"
+    filemanager = "nerdtree"
+    enable_guicolors = true
+    statusline_separator = "arrow"
+    statusline_inactive_separator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+    autocomplete_method = "coc"
+    autocomplete_method = "coc"
+    #autocomplete_parens = false
+[[layers]]
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = "smart"
+  auto_completion_tab_key_behavior = "smart"
+#auto_completion_enable_snippets_in_popup = true
+#auto_completion_delay = 200
+#auto_completion_complete_with_key_sequence = "nil"
+  auto_completion_complete_with_key_sequence_delay = 0.1
+
+
+[[layers]]
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30
+
+[[layers]]
+  name = 'format'
+
+[[layers]]
+  name = 'checker'
+
+[[layers]]
+  name= 'lang#go'
+
+[[layers]]
+  name= 'lang#rust'
+
+[[layers]]
+  name = 'lang#javascript'
+
+[[layers]]
+  name = 'lang#typescript'
+
+[[layers]]
+  name = "lsp"
+  filetypes = [
+    "go",
+    "rust",
+    "c",
+    "cpp",
+  ]
+  [layers.override_cmd]
+    rust = ["rustup", "run", "nightly", "rls"]
+    go = ["gopls"]
+
+[[layers]]
+  name = 'git'
+  git-plugin = "fugitive"
+
+[[layers]]
+  name = 'gtags'
+
+[[layers]]
+  name = 'fzf'
+
+[[custom_plugins]]
+  name = "arzg/vim-colors-xcode"
+  merged = 0
+
+[[custom_plugins]]
+  name = "dracula/vim"
+  merged = 0
+
+[[custom_plugins]]
+  name = "tpope/vim-abolish"
+ 
+[[custom_plugins]]
+  name = "NLKNguyen/papercolor-theme"
+  merged = 0
+
+[[layers]]
+  name = "core#statusline"
+
+[[layers]]
+  name = "lang#c"
+  clang_executable = "/usr/bin/clang"
+  [layer.clang_std]
+    c = "c11"
+    cpp = "c++1z"
+    objc = "c11"
+    objcpp = "c++1z"
+
