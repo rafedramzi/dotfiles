@@ -1,23 +1,23 @@
 set selection-clipboard clipboard
 set first-page-column 1:1
 #set default-bg "#ffffff"
+set page-padding 3
 
 #set recolor-darkcolor \#839496
 #
-#set font "monospace normal 14"
 #map <C-i> recolor
 # SOURCE:  https://github.com/esn89/base16-zathura/blob/master/zathurarc-dark
 # {{{
 # zathurarc-dark
 
-set font                        "inconsolata 12"
-set default-bg                  "#B0B0B0" #00
+#set font "arial normal 14"
+set font "inconsolata normal 14"
+#set font                        "inconsolata 12"
+set default-bg                  "#F4F4F9" #00
 set default-fg                  "#202020" #01
 
 set statusbar-fg                "#B0B0B0" #04
-set statusbar-bg                "#202020" #01
-
-#set inputbar-bg                 "#151515" #00 currently not used
+set statusbar-bg                "#202020" #01 set inputbar-bg                 "#151515" #00 currently not used
 #set inputbar-fg                 "#303030" #02
 
 set notification-error-bg       "#AC4142" #08
@@ -45,9 +45,10 @@ set recolor                     "true"
 # setting recolor-keep true will keep any color your pdf has.
 # if it is false, it'll just be black and white
 set recolor-keephue             "true"
-set recolor false
+set recolor true
 
 # Rest of your configs go here:
 # }}}
 
 set database sqlite
+
