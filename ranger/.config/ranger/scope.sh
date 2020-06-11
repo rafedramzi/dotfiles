@@ -293,7 +293,7 @@ handle_mime() {
         text/* | */xml)
             ## Syntax highlight
             if [[ "$( stat --printf='%s' -- "${FILE_PATH}" )" -gt "${HIGHLIGHT_SIZE_MAX}" ]]; then
-                exit 3
+                exit 2
             fi
             if [[ "$( tput colors )" -ge 256 ]]; then
                 local pygmentize_format='terminal256'
@@ -348,3 +348,4 @@ handle_mime "${MIMETYPE}"
 handle_fallback
 
 exit 1
+
