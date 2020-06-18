@@ -9,9 +9,9 @@ set tabstop=2
 set softtabstop=2
 " when indenting with '>', use 2 spaces width
 set shiftwidth=2
+set nofoldenable "Disable folding
 
-
-
+call plug#begin()
 source ~/.config/nvim/plugin.vim
 source ~/.config/nvim/themes.vim
 source ~/.config/nvim/settings_coc-nvim.vim
@@ -25,6 +25,7 @@ source ~/.config/nvim/settings_vista.vim
 source ~/.config/nvim/settings_airline.vim
 "source ~/.config/nvim/settings_vim-racer.vim
 "source ~/.config/nvim/settings_tagbar.vim
+call plug#end()
 
 
 source ~/.config/nvim/functions/*

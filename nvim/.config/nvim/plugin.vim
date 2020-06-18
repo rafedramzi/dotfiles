@@ -39,6 +39,7 @@ Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'vim-airline/vim-airline'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'mg979/vim-visual-multi'
 "}}}
 "{{{ THEME
 Plug 'arzg/vim-colors-xcode'
