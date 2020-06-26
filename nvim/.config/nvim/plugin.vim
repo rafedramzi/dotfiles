@@ -23,10 +23,11 @@ Plug 'qpkorr/vim-bufkill'
 "}}}
 "{{{ TYPINGS
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/emmet-vim'
+Plug 'editorconfig/editorconfig-vim'
 "}}}
 "{{{ JULIA
 Plug 'juliaeditorsupport/julia-vim'
@@ -39,15 +40,17 @@ Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'vim-airline/vim-airline'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'mg979/vim-visual-multi'
+"Plug 'mg979/vim-visual-multi'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'konfekt/fastfold'
 "}}}
 "{{{ THEME
 Plug 'arzg/vim-colors-xcode'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'nanotech/jellybeans.vim'
-Plug 'artanikin/vim-synthwave84'
 Plug 'tomasr/molokai'
+" Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'artanikin/vim-synthwave84'
 "}}}
 "{{{ SYNTAX
 Plug 'neomake/neomake'
