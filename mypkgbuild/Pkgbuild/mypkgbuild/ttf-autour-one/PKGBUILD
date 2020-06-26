@@ -1,7 +1,7 @@
 # Maintainer: Chocopwowwa <chocopowwwa@gmail.com>
 # Source: https://git.archlinux.org/svntogit/community.git/plain/trunk/PKGBUILD?h=packages/ttf-roboto
 
-pkgname=ttf-artour-one
+pkgname=ttf-autour-one
 pkgver=1
 pkgrel=1
 
