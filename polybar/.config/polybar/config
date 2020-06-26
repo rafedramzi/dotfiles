@@ -26,37 +26,31 @@ index-sort = true
 enable-click = true
 fuzzy-match = true
 wrapping-scroll = true
-strip-wsnumbers = false
+strip-wsnumbers = true
 pin-workspaces = false
 
-label-focused = "%index% %{F#aee1da}%icon%%{F-}"
-#label-focused = "%name% %{F#aee1da}%icon%%{F-}"
+label-focused = "%index%"
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.primary}
-label-focused-padding = 3
-label-focused-underline = ${colors.secondary}
+label-focused-padding = 1
+label-focused-underline = ${colors.primary}
 
-label-unfocused = "%{F#ffffff}%index%%{F-} %icon%"
-#label-unfocused = "%{F#aee1da}%name%%{F-} %icon%"
+label-unfocused = "%index%"
 label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.primary}
-label-unfocused-padding = 3
+label-unfocused-foreground = ${colors.secondary}
+label-unfocused-padding = 1
 label-unfocused-underline = ${colors.background}
 
-
-label-urgent = "%{F#ff0000}%index%%{F-} %icon%"
-#label-urgent = "%{F#aee1da}%name%%{F-} %icon%"
-#label-urgent = "%name% %{F#aee1da}%icon%%{F-}"
+label-urgent = "%index%"
 label-urgent-background = ${colors.background}
-label-urgent-foreground = ${colors.primary}
-label-urgent-padding = 3
+label-urgent-foreground = ${colors.alert}
+label-urgent-padding = 1
 label-urgent-underline = ${colors.background}
 
-label-visible = "%{F#ffffff}%index%%{F-} %icon%"
-#label-visible = "%name% %{F}%icon%%{F-}"
+label-visible = "%index%"
 label-visible-background = ${colors.background}
 label-visible-foreground = ${colors.primary}
-label-visible-padding = 3
+label-visible-padding = 1
 label-visible-underline = ${colors.background}
 
 ws-icon-0 = 1;
@@ -118,8 +112,8 @@ ramp-signal-2 =" "
 ramp-signal-3 =" "
 ramp-signal-4 =" "
 
-label-connected-foreground = ${colors.tertiary}
-label-disconnected-foreground = ${colors.quintessential}
+label-connected-foreground = ${colors.secondary}
+label-disconnected-foreground = ${colors.alert}
 
 [module/date]
 type = internal/date
@@ -129,8 +123,7 @@ date = "%c"
 date-alt = "%d/%m/%y"
 time = "%H:%M"
 time-alt = %H:%M
-format-foreground = ${colors.primary}
-
+format-foreground = ${colors.foreground}
 label = %date% %time%
 
 
@@ -141,7 +134,7 @@ type = internal/pulseaudio
 ; If not, uses default sink
 sink = alsa_output.pci-0000_05_00.6.analog-stereo
 
-format-volume = <ramp-volume><label-volume>
+format-volume = <label-volume><ramp-volume>
 label-volume = "%percentage%"
 ramp-volume-0 =" "
 ramp-volume-1 =" "
@@ -149,9 +142,9 @@ ramp-volume-2 =" "
 ramp-volume-3 =" "
 format-muted-prefix = " "
 
-label-volume-foreground = ${colors.quintessential}
-format-muted-foreground = ${colors.quintessential}
-label-muted-foreground = ${colors.quintessential}
+label-volume-foreground = ${colors.foreground}
+format-muted-foreground = ${colors.alert}
+label-muted-foreground = ${colors.alert}
 
 
 [module/battery]
@@ -203,7 +196,7 @@ exec = echo "$(uname -n)"
 
 [module/temperature]
 type = internal/temperature
-format-foreground = ${colors.quandary}
+format-foreground = ${colors.foreground}
 
 
 ; Seconds to sleep between updates
