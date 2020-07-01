@@ -12,9 +12,9 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /media/mediabarbosa
+mount-1 = /home
 
-label-mounted =  %percentage_free%%
+label-mounted =  %mountpoint%: %free%% 
 label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground}
 
