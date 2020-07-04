@@ -1,5 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["python", "rust", "c", "cpp", "julia"],
+  "coc.preferences.formatOnSaveFiletypes": ["py", "rs", "c", "cpp", "julia"],
   "coc.preferences.hoverTarget": "float",
   "signature.target": "float",
   "languageserver": {
@@ -36,6 +36,11 @@
     },
     "golang": {
       "command": "gopls",
+      //"command": "go-langserver",
+      // "initializationOptions": {
+      //   "gocodeCompletionEnabled": true,
+      //   "diagnosticsEnabled": true,
+      // },
       "rootPatterns": ["go.mod"],
       "filetypes": ["go"]
     },

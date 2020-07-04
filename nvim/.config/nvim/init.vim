@@ -22,19 +22,19 @@ filetype plugin on
 
 source ~/.config/nvim/plugin.vim
 source ~/.config/nvim/themes.vim
-source ~/.config/nvim/settings_coc-nvim.vim
-source ~/.config/nvim/settings_vim-go.vim
-source ~/.config/nvim/settings_nerdtree.vim
-source ~/.config/nvim/settings_neomake.vim
+source ~/.config/nvim/settings/coc-nvim.vim
+source ~/.config/nvim/settings/vim-go.vim
+source ~/.config/nvim/settings/nerdtree.vim
+source ~/.config/nvim/settings/neomake.vim
 source ~/.config/nvim/my-keystrokes.vim
-source ~/.config/nvim/settings_rust-vim.vim
-source ~/.config/nvim/settings_fzf.vim
-source ~/.config/nvim/settings_vista.vim
-source ~/.config/nvim/settings_airline.vim
-source ~/.config/nvim/settings-nerdcommenter.vim
+source ~/.config/nvim/settings/rust-vim.vim
+source ~/.config/nvim/settings/fzf.vim
+source ~/.config/nvim/settings/vista.vim
+source ~/.config/nvim/settings/airline.vim
+source ~/.config/nvim/settings/nerdcommenter.vim
 
-"source ~/.config/nvim/settings_vim-racer.vim
-"source ~/.config/nvim/settings_tagbar.vim
+"source ~/.config/nvim/settings/vim-racer.vim
+"source ~/.config/nvim/settings/tagbar.vim
 
 
 source ~/.config/nvim/functions/*
