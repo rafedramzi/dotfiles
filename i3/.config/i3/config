@@ -284,6 +284,7 @@ assign [class="^Station"] $ws13
 assign [class="^Mailspring"] $ws13
 #Note Writing
 assign [class="^Boostnote"] $ws14
+assign [class="^zettlr"] $ws14
 # 17 - Stuff
 assign [class="^GNU\ Octave"] $ws17
 #ify
