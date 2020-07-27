@@ -1,4 +1,21 @@
 call plug#begin('~/.vim/plugged')
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
+Plug 'Shougo/echodoc.vim'
+set cmdheight=2
+let g:echodoc#enable_at_startup = 1
+let g:echodoc#type = 'signature'
+
+" ====================================
+
+
 "{{{ RUST
 Plug 'rust-lang/rust.vim'
 "}}}
@@ -24,7 +41,7 @@ Plug 'qpkorr/vim-bufkill'
 "Plug 'ctrlpvim/ctrlp.vim'
 "}}}
 "{{{ TYPINGS
-Plug 'maralla/completor.vim'
+"Plug 'maralla/completor.vim'
 Plug 'tpope/vim-surround'
 "Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'

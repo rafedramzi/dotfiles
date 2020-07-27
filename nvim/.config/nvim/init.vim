@@ -17,13 +17,11 @@ set incsearch
 set undodir=~/.vim/undodir
 set undofile
 set autoread " Auto Refresh
+set signcolumn=yes
 
-" Coc vim debug
-" let g:node_client_debug = 1 filetype plugin on 
 source ~/.config/nvim/plugin.vim
 source ~/.config/nvim/themes.vim
-"source ~/.config/nvim/settings/coc-nvim.vim
-source ~/.config/nvim/settings/completor.vim
+"source ~/.config/nvim/settings/completor.vim
 source ~/.config/nvim/settings/LanguageClient.vim
 source ~/.config/nvim/settings/vim-go.vim
 source ~/.config/nvim/settings/nerdtree.vim
@@ -34,8 +32,7 @@ source ~/.config/nvim/settings/fzf.vim
 source ~/.config/nvim/settings/vista.vim
 source ~/.config/nvim/settings/airline.vim
 source ~/.config/nvim/settings/nerdcommenter.vim
-
-"source ~/.config/nvim/settings/vim-racer.vim
+"
 "source ~/.config/nvim/settings/tagbar.vim
 
 
