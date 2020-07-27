@@ -16,6 +16,8 @@ set smartcase
 set incsearch
 set undodir=~/.vim/undodir
 set undofile
+set autoread " Auto Refresh
+
 " Coc vim debug
 " let g:node_client_debug = 1
 filetype plugin on

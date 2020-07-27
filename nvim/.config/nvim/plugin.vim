@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 "{{{ RUST
 Plug 'rust-lang/rust.vim'
-"Plug 'racer-rust/vim-racer'
 "}}}
 "{{{ GOLANG
 Plug 'fatih/vim-go'
@@ -36,13 +35,14 @@ Plug 'juliaeditorsupport/julia-vim'
 "{{{ Others
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic' " Cause slow
 Plug 'godlygeek/tabular'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'nathanaelkane/vim-indent-guides'
 "Plug 'mg979/vim-visual-multi'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'konfekt/fastfold'
+"Plug 'konfekt/fastfold'
 "}}}
 "{{{ THEME
 Plug 'arzg/vim-colors-xcode'

@@ -1,5 +1,6 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["py", "rs", "c", "cpp", "julia"],
+  //"coc.preferences.formatOnSaveFiletypes": ["py", "rs", "c", "cpp", "julia"],
+  "coc.preferences.formatOnSaveFiletypes": [],
   "coc.preferences.hoverTarget": "float",
   "signature.target": "float",
   "languageserver": {
