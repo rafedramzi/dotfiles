@@ -8,9 +8,12 @@ Plug 'udalov/kotlin-vim'
 "}}}
 "{{{ LSP
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"}}}
-"{{{ NAVIGATION
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"" Commented becase I use the aur package
+"Plug 'autozimu/LanguageClient-neovim', {
+"    \ 'branch': 'next',
+"    \ 'do': 'bash install.sh',
+"    \ } }}} {{{ NAVIGATION
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -21,6 +24,7 @@ Plug 'qpkorr/vim-bufkill'
 "Plug 'ctrlpvim/ctrlp.vim'
 "}}}
 "{{{ TYPINGS
+Plug 'maralla/completor.vim'
 Plug 'tpope/vim-surround'
 "Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
