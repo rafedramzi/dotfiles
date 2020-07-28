@@ -20,6 +20,7 @@ set autoread " Auto Refresh
 set signcolumn=yes
 
 source ~/.config/nvim/plugin.vim
+source ~/.config/nvim/settings/deoplete.vim
 source ~/.config/nvim/themes.vim
 "source ~/.config/nvim/settings/completor.vim
 source ~/.config/nvim/settings/LanguageClient.vim
