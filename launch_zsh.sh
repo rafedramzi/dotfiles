@@ -11,7 +11,7 @@ function run_antibody {
   #plugins+=(zsh-autosuggestions zsh-syntax-highlighting)
 
   if [[ ! -f "$FILE_PLUGIN_LAUNCH" ]]; then
-    echo "$FILE_PLUGIN_LAUNCH doesn't exist"
+    echo "$FILE_PLUGIN_LAUNCH doesn't exist, creating one..."
     antibody bundle < ~/.dotfiles/antibody/bundles.txt >  $FILE_PLUGIN_LAUNCH
     chmod +x "$FILE_PLUGIN_LAUNCH"
   fi
@@ -31,8 +31,10 @@ function load_aliases {
 }
 
 function load_envs {
-  source $HOME/.dotfiles/envs/terminaltc
+  source $HOME/.dotfiles/envs/terminalrc
+  source $HOME/.dotfiles/envs/terminalrc.zsh
   source $HOME/.dotfiles/envs/developmentrc
+  source $HOME/.dotfiles/envs/desktoprc
 }
 
 function load_pywal {
@@ -46,11 +48,10 @@ function load_pywal {
 }
 
 run_antibody
-#run_starship
+run_starship
 load_aliases
 load_envs
 #load_pywal
 
 #set +e # DEBUGGING PURPOSE ONLY
-#eval  "$(starship init zsh)"
 eval "$(direnv hook zsh)"
