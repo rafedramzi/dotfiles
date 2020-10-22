@@ -6,39 +6,21 @@ export JUPYTERNOTEBOOK_DIR=$HOME/Projects/jupyter/notebook
 export PATH="$HOME/.emacs.d/bin:$PATH"
 #}}}
 #{{{FLUTTER
-export PATH=$PATH:$HOME/Projects/SDK/flutter/bin
+export PATH="$PATH:$HOME/Projects/SDK/flutter/bin"
 #}}}
 #{{{ GOLANG 
-export GOPATH=$HOME/Projects/data/go
+export GOPATH="$HOME/Projects/data/go"
 #export GOSUMDB=https://sum.golang.org
-export PATH=$PATH:$GOPATH/bin
+export PATH="$PATH:$GOPATH/bin"
 #}}}
 #{{{RUST
-export PATH=$HOME/.cargo/bin:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
 #}}}
 ### NODE BIN {
-export PATH=$PATH:$HOME/.yarn/bin
-export PATH=$PATH:$HOME/.pnpm/bin
+export PATH="$PATH:$HOME/.yarn/bin"
+export PATH="$PATH:$HOME/.pnpm/bin"
 ###}
 #### PYTHON {
-
-## Miniconda
-
-### Dont't Uncomment this conda initialize, it's slowing your shell
-### >>> conda initialize >>>
-### !! Contents within this block are managed by 'conda init' !!
-##__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-##if [ $? -eq 0 ]; then
-##    eval "$__conda_setup"
-##else
-##    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-##        . "/opt/miniconda3/etc/profile.d/conda.sh"
-##    else
-##        export PATH="/opt/miniconda3/bin:$PATH"
-##    fi
-##fi
-##unset __conda_setup
-### <<< conda initialize <<<
 
 #}
 #
@@ -46,6 +28,6 @@ export PATH=$PATH:$HOME/.pnpm/bin
 ## Don't use all my cores please .... :D
 export MAKEFLAGS='-j 7'
 # }}}
-export PATH=$HOME/.local/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 
