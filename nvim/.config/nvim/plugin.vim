@@ -7,6 +7,8 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+let g:deoplete#enable_at_startup = 1
+
 Plug 'Shougo/echodoc.vim'
 set cmdheight=2
 let g:echodoc#enable_at_startup = 1
@@ -25,16 +27,20 @@ Plug 'udalov/kotlin-vim'
 "{{{ LSP
 "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"" Commented becase I use the aur package
-"Plug 'autozimu/LanguageClient-neovim', {
-"    \ 'branch': 'next',
-"    \ 'do': 'bash install.sh',
-"    \ } }}} {{{ NAVIGATION
+"" README: Commented becase I use the aur package
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+"}}} {{{ NAVIGATION
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'liuchengxu/vista.vim'
-Plug 'junegunn/fzf.vim'
+
+"Plug 'junegunn/fzf.vim'
+Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
+
 Plug 'qpkorr/vim-bufkill'
 "Plug 'majutsushi/tagbar'
 "Plug 'ctrlpvim/ctrlp.vim'
@@ -53,16 +59,19 @@ Plug 'juliaeditorsupport/julia-vim'
 "Plug 'julialang/julia-vim'
 "}}}
 "{{{ Others
+Plug 'equalsraf/neovim-gui-shim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 "Plug 'scrooloose/syntastic' " Cause slow
 Plug 'godlygeek/tabular'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'nathanaelkane/vim-indent-guides'
-"Plug 'mg979/vim-visual-multi'
-Plug 'terryma/vim-multiple-cursors'
-"Plug 'konfekt/fastfold'
+Plug 'mg979/vim-visual-multi'
+"Plug 'terryma/vim-multiple-cursors'
+"Plug 'nathanaelkane/vim-indent-guides'
+Plug 'yggdroot/indentline'
+Plug 'pedrohdz/vim-yaml-folds'
+Plug 'konfekt/fastfold'
 "}}}
 "{{{ THEME
 Plug 'arzg/vim-colors-xcode'

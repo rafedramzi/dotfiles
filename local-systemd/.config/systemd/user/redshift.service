@@ -6,6 +6,7 @@ Documentation=http://jonls.dk/redshift/
 [Service]
 ExecStart=/usr/bin/redshift -c %h/.config/redshfit.conf
 Restart=always
+RestartSec=5s
 
 [Install]
 WantedBy=default.target

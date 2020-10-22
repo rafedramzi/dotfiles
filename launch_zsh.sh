@@ -7,7 +7,7 @@ function run_antibody {
   export DISABLE_AUTO_UPDATE="true"
   FILE_PLUGIN_LAUNCH="$HOME/.zsh_plugins.sh"
   
-  plugins=()
+  #plugins=()
   #plugins+=(zsh-autosuggestions zsh-syntax-highlighting)
 
   if [[ ! -f "$FILE_PLUGIN_LAUNCH" ]]; then

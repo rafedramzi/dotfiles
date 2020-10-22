@@ -35,18 +35,16 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id octopi-notifier
 exec --no-startup-id ~/.screenlayout/Home.sh
+exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
+#bindsym $mod+Return exec TERMINAL=alacritty i3-sensible-terminal
 bindsym $mod+Return exec TERMINAL=kitty i3-sensible-terminal
 bindsym $mod+Tab workspace back_and_forth
 
@@ -288,16 +286,22 @@ assign [class="^zettlr"] $ws14
 # 17 - Stuff
 assign [class="^GNU\ Octave"] $ws17
 #ify
-assign [class="Spotify"]  $ws18
+for_window [class="Spotify"] move to workspace $ws18
 assign [class="ify"] $ws18
 
 
 
 # MULTIMEDIA
 # Pulse Audio controls
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -314,8 +318,10 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 # PRINT SCREEEN
-bindsym --release Print exec maim -B -u -s | xclip -selection clipboard -t image/png
-bindsym --release Shift+Print exec maim -B -u -i $(xdotool getactivewindow) ~/Pictures/screenshots/screenshot-$(date '+%Y-%m-%d-%H:%M:%S').png
+bindsym --release Print exec flameshot gui
+bindsym --release Shift+Print exec flameshot screen -p ~/Pictures/screenshots/
+#bindsym --release Print exec maim -B -u -s | xclip -selection clipboard -t image/png
+#bindsym --release Shift+Print exec maim -B -u -i $(xdotool getactivewindow) ~/Pictures/screenshots/screenshot-$(date '+%Y-%m-%d-%H:%M:%S').png
 
 ## Base16 oomox-StValentino
 # Author: oomox-StValentino

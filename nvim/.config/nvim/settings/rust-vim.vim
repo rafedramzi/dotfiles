@@ -5,3 +5,6 @@ if $WAYLAND_DISPLAY == "wayland-0"
 else
   let g:rust_clip_command = 'xclip -selection clipboard'
 endif
+
+
+let g:cargo_shell_command_runner = '!'

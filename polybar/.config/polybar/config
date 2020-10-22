@@ -33,7 +33,7 @@ label-focused = "%index%"
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.primary}
 label-focused-padding = 1
-label-focused-underline = ${colors.primary}
+label-focused-underline = #fff
 
 label-unfocused = "%index%"
 label-unfocused-background = ${colors.background}
@@ -51,7 +51,7 @@ label-visible = "%index%"
 label-visible-background = ${colors.background}
 label-visible-foreground = ${colors.primary}
 label-visible-padding = 1
-label-visible-underline = ${colors.background}
+label-visible-underline = ${colors.primary}
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
@@ -121,7 +121,7 @@ interval = 5
 
 date = "%c"
 date-alt = "%d/%m/%y"
-time = "%H:%M"
+#time = 
 time-alt = %H:%M
 format-foreground = ${colors.foreground}
 label = %date% %time%

@@ -49,6 +49,9 @@
   name = 'lang#typescript'
 
 [[layers]]
+  name = 'lang#python'
+
+[[layers]]
   name = "lsp"
   filetypes = [
     "go",

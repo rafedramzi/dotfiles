@@ -5,7 +5,10 @@ let g:LanguageClient_serverCommands = {
     \ 'c': ['/usr/bin/clangd'],
     \ 'cpp': ['/usr/bin/clangd'],
     \ 'rust': ['/usr/bin/rust-analyzer'],
+    \ 'go': ['gopls'],
     \ 'javascript': ['/usr/bin/javascript-typescript-stdio'],
+    \ 'typescript': ['/usr/bin/javascript-typescript-stdio'],
+    \ 'typescript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'python': ['/usr/bin/pyls'],
     \ }
@@ -33,5 +36,6 @@ endfunction()
 
 augroup LSP
   autocmd!
-  autocmd FileType cpp,c call SetLSPShortcuts()
+  "autocmd FileType cpp,c call SetLSPShortcuts()
+  call SetLSPShortcuts()
 augroup END
