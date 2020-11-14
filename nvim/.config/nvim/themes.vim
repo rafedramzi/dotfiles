@@ -13,9 +13,10 @@ set background=dark
 colorscheme PaperColor
 "set termguicolors
 " colorscheme dracula
-colorscheme jellybeans
-colorscheme xcodedark
-" colorscheme xcodedarkhc
+"colorscheme jellybeans
+"colorscheme xcodedark
+"colorscheme cobalt2
+colorscheme xcodedarkhc
 
 "" MOLOKAI: Choose one of them
 " let g:molokai_original = 1

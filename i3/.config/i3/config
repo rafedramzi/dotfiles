@@ -255,7 +255,9 @@ assign [class="^Chromium"] $ws1
 # 2 - TERMINAL
 # 3 - EDITOR
 assign [class="^code-oss"] $ws3
+assign [class="^Ghidra"]  $ws3
 assign [class="^Code"]  $ws3
+assign [class="^Bless"]  $ws3
 assign [class="^jetbrains-studio"]  $ws3
 assign [class="^Code\ -\ Insiders"]  $ws3
 assign [class="^atom"]  $ws3

@@ -26,6 +26,8 @@ set completeopt=menu " To avoid annoying vertical split
 "set autochdir
 "
 "
+set ignorecase
+set smartcase
 
 " Auto reload file when switchign buffer: https://vi.stackexchange.com/questions/444/how-do-i-reload-the-current-file
 au FocusGained,BufEnter * :checktime
