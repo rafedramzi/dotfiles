@@ -79,12 +79,14 @@ Plug 'flazz/vim-colorschemes'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'nanotech/jellybeans.vim'
 Plug 'tomasr/molokai'
+Plug 'cespare/vim-toml'
 " Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'artanikin/vim-synthwave84'
 "}}}
 "{{{ SYNTAX
 Plug 'neomake/neomake'
 Plug 'plasticboy/vim-markdown'
+let g:vim_markdown_conceal = 0
 "}}}
 call plug#end()
 
