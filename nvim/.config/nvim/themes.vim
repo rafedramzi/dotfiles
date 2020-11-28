@@ -10,15 +10,13 @@ set number relativenumber
 " SOURCE END
 
 set background=dark
-colorscheme PaperColor
-"set termguicolors
+" colorscheme PaperColor
 " colorscheme dracula
-"colorscheme jellybeans
-"colorscheme xcodedark
+colorscheme molokai
 "colorscheme cobalt2
-colorscheme xcodedarkhc
+"colorscheme xcodedarkhc
 
 "" MOLOKAI: Choose one of them
-" let g:molokai_original = 1
+let g:molokai_original = 1
 " let g:rehash256 = 1
 

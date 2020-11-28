@@ -1,5 +1,4 @@
 #alias ls=exa
-alias vim=nvim
 alias npm=pnpm
 alias ec=emacsclient
 alias nvr="nvr --servername $HOME/.local/nvim.sock"
