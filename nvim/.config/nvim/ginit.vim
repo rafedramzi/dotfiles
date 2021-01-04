@@ -1,4 +1,6 @@
 " GUI
-GuiFont Cascadia Code:h12
+"
+GuiTabline 0
+GuiFont Cascadia Code:h14
 "set NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
-"Guifont DejaVu Sans Mono:h13
+"Guifont DejaVu Sans Mono:h16

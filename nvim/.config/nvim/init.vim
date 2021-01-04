@@ -9,7 +9,6 @@ set softtabstop=2
 set shiftwidth=2
 set smartindent
 set noerrorbells
-set termguicolors
 set nofoldenable "Disable folding
 set foldmethod=syntax
 set foldlevel=99
@@ -28,6 +27,10 @@ set completeopt=menu " To avoid annoying vertical split
 "
 set ignorecase
 set smartcase
+
+if has('nvim') || has('termguicolors')
+  set termguicolors
+endif
 
 " Auto reload file when switchign buffer: https://vi.stackexchange.com/questions/444/how-do-i-reload-the-current-file
 au FocusGained,BufEnter * :checktime

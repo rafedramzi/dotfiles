@@ -4,7 +4,7 @@ set hidden
 let g:LanguageClient_serverCommands = {
     \ 'c': ['/usr/bin/clangd'],
     \ 'cpp': ['/usr/bin/clangd'],
-    \ 'rust': ['/usr/bin/rust-analyzer'],
+    \ 'rust': ['/usr/bin/rustup', 'run', 'nightly', 'rls'],
     \ 'go': ['gopls'],
     \ 'javascript': ['/usr/bin/javascript-typescript-stdio'],
     \ 'typescript': ['/usr/bin/javascript-typescript-stdio'],
@@ -19,7 +19,6 @@ nmap <F5> <Plug>(lcn-menu)
 nmap <silent>K <Plug>(lcn-hover)
 nmap <silent> gd <Plug>(lcn-definition)
 nmap <silent> <F2> <Plug>(lcn-rename)
-
 
 function SetLSPShortcuts()
   nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
@@ -36,6 +35,8 @@ endfunction()
 
 augroup LSP
   autocmd!
-  "autocmd FileType cpp,c call SetLSPShortcuts()
   call SetLSPShortcuts()
 augroup END
+
+let g:LanguageClient_useFloatingHover = 1
+let g:LanguageClient_hoverPreview = "Always"

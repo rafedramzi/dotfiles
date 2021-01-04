@@ -11,12 +11,13 @@ set number relativenumber
 
 set background=dark
 " colorscheme PaperColor
-" colorscheme dracula
-colorscheme molokai
-"colorscheme cobalt2
+colorscheme dracula
+" colorscheme molokai
+" colorscheme cobalt2
 "colorscheme xcodedarkhc
+" colorscheme challenger_deep
 
 "" MOLOKAI: Choose one of them
-let g:molokai_original = 1
+" let g:molokai_original = 1
 " let g:rehash256 = 1
 
