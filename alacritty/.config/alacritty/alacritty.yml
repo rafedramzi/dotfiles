@@ -190,6 +190,7 @@ font:
 # Colors (Dracula)
 # Colors (iTerm 2 default theme)
 #https://github.com/eendroroy/alacritty-theme
+# The Lovelace: https://github.com/eendroroy/alacritty-theme/blob/10a5896f24c16d6540c71506c4bc51960fa3783e/themes/thelovelace.yaml
 colors:
   # Default colors
   primary:
@@ -216,7 +217,35 @@ colors:
     magenta: '0x556FFF'
     cyan:    '0x3FDCEE'
     white:   '0xBEBEC1'
-  indexed_colors: []
+## Challenger Deep - https://github.com/challenger-deep-theme/alacritty/blob/master/challenger-deep.yml
+##colors:
+##  # Default colors
+##  primary:
+##    background: '0x1b182c'
+##    foreground: '0xcbe3e7'
+##
+##  # Normal colors
+##  normal:
+##    black:   '0x100e23'
+##    red:     '0xff8080'
+##    green:   '0x95ffa4'
+##    yellow:  '0xffe9aa'
+##    blue:    '0x91ddff'
+##    magenta: '0xc991e1'
+##    cyan:    '0xaaffe4'
+##    white:   '0xcbe3e7'
+##
+##  # Bright colors
+##  bright:
+##    black:   '0x565575'
+##    red:     '0xff5458'
+##    green:   '0x62d196'
+##    yellow:  '0xffb378'
+##    blue:    '0x65b2ff'
+##    magenta: '0x906cff'
+##    cyan:    '0x63f2f1'
+##    white:   '0xa6b3cc'
+##  indexed_colors: []
 
   # Indexed Colors
   #
@@ -262,7 +291,7 @@ draw_bold_text_with_bright_colors: false
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-#background_opacity: 0.98
+background_opacity: 0.92
 
 #selection:
 #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
@@ -299,7 +328,7 @@ draw_bold_text_with_bright_colors: false
 #   - (Linux) user login shell
 #   - (Windows) powershell
 shell:
-  program: /bin/fish
+  program: /bin/zsh
   args:
     - --login
 
