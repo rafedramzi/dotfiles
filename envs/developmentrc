@@ -20,6 +20,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.yarn/bin"
 export PATH="$PATH:$HOME/.pnpm/bin"
 ###}
+#### OTHERS {
+export PATH="$PATH:/opt/chef-workstation/bin"
+export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
+#### }
 #### PYTHON {
 
 #}

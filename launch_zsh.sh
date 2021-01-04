@@ -34,7 +34,6 @@ function load_envs {
   source $HOME/.dotfiles/envs/terminalrc
   source $HOME/.dotfiles/envs/terminalrc.zsh
   source $HOME/.dotfiles/envs/developmentrc
-  source $HOME/.dotfiles/envs/desktoprc
 }
 
 function load_pywal {
