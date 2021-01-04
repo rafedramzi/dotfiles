@@ -33,9 +33,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-exec --no-startup-id octopi-notifier
-exec --no-startup-id ~/.screenlayout/Home.sh
-exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon
+#exec --no-startup-id octopi-notifier
+exec --no-startup-id ~/.screenlayout/Home-right.sh
+##exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon
+exec --no-startup-id dunst
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -44,8 +45,8 @@ set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec TERMINAL=alacritty i3-sensible-terminal
-bindsym $mod+Return exec TERMINAL=kitty i3-sensible-terminal
+bindsym $mod+Return exec TERMINAL=alacritty i3-sensible-terminal
+#bindsym $mod+Return exec TERMINAL=kitty i3-sensible-terminal
 bindsym $mod+Tab workspace back_and_forth
 
 # kill focused window
@@ -252,6 +253,7 @@ default_border none
 # 1 - BROWSERS
 assign [class="^firefox"] $ws1
 assign [class="^Chromium"] $ws1
+assign [class="^Brave-browser"] $ws1
 # 2 - TERMINAL
 # 3 - EDITOR
 assign [class="^code-oss"] $ws3
@@ -296,8 +298,8 @@ assign [class="ify"] $ws18
 # MULTIMEDIA
 # Pulse Audio controls
 #
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
