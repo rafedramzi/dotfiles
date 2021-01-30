@@ -342,4 +342,9 @@ format = <label>
 exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song}'
 format-underline = #1db954
 
+
+[module/quote]
+type = custom/script
+exec = ~/.config/polybar/quote.sh
+interval = 60
 ; vim:ft=dosini
