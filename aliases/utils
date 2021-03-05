@@ -3,10 +3,10 @@ alias rust-repl="evcxr"
 
 
 alias ls='exa'
-alias l='exa -lahbF'
-alias ll='exa -lbhF'
-alias llm='exa -albF --sort=modified'
-alias la='ls -laFh'
+alias l='exa -lgahbF'
+alias ll='exa -lgbhF'
+alias llm='exa -algbF --sort=modified'
+alias la='ls -lgaFh'
 
 
 # From: https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh
