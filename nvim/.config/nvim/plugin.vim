@@ -58,6 +58,8 @@ call plug#begin('~/.vim/plugged')
       Plug 'mg979/vim-visual-multi'
       "Plug 'terryma/vim-multiple-cursors' "Plug 'nathanaelkane/vim-indent-guides'
       Plug 'yggdroot/indentline'
+      Plug 'lmeijvogel/vim-yaml-helper'
+      Plug 'stephpy/vim-yaml'
       Plug 'pedrohdz/vim-yaml-folds'
       Plug 'konfekt/fastfold'
       "}}}
@@ -68,15 +70,18 @@ call plug#begin('~/.vim/plugged')
       Plug 'tomasr/molokai'
       Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
       Plug 'cespare/vim-toml'
-      Plug 'dracula/vim', { 'as': 'dracula' }
       Plug 'artanikin/vim-synthwave84'
       "}}}
-      "{{{ SYNTAX
+      "{{{ OTHERs
+      Plug 'hashivim/vim-terraform'
+      "}}}
+      "{{{ syntax
       Plug 'neomake/neomake'
       Plug 'plasticboy/vim-markdown'
       let g:vim_markdown_conceal = 0
       "}}}
       "
   endif
+  Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 

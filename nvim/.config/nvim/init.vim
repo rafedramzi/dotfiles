@@ -49,10 +49,13 @@ source ~/.config/nvim/settings/nerdtree.vim
 source ~/.config/nvim/settings/fzf.vim
 source ~/.config/nvim/settings/airline.vim
 source ~/.config/nvim/settings/nerdcommenter.vim
+source ~/.config/nvim/settings/others.vim
 source ~/.config/nvim/my-keystrokes.vim
 
 source ~/.config/nvim/functions/*
 
 
 
-
+" enable json quoting from json-vim, TODO: NOT WORKING!
+set conceallevel=0
+let g:vim_json_syntax_conceal=0
