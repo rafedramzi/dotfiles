@@ -57,10 +57,13 @@ call plug#begin('~/.vim/plugged')
       Plug 'vim-airline/vim-airline-themes'
       Plug 'mg979/vim-visual-multi'
       "Plug 'terryma/vim-multiple-cursors'
+      " Not that nice
       "Plug 'nathanaelkane/vim-indent-guides'
+      "let g:indent_guides_enable_on_vim_startup = 1
 
       Plug 'yggdroot/indentline'
-      let g:indentLine_setConceal = 0 " Must be use with yggdroot/indentline
+      autocmd Filetype json :IndentLinesDisable
+      "let g:indentLine_setConceal = 2 " Must be use with yggdroot/indentline
       "
       Plug 'lmeijvogel/vim-yaml-helper'
       Plug 'stephpy/vim-yaml'
