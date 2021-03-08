@@ -81,6 +81,13 @@ call plug#begin('~/.vim/plugged')
       "}}}
       "{{{ OTHERs
       Plug 'hashivim/vim-terraform'
+
+
+      Plug 'vimwiki/vimwiki'
+      set nocompatible
+      filetype plugin on
+      syntax on
+
       "}}}
       "{{{ syntax
       Plug 'neomake/neomake'
