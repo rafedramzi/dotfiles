@@ -1,4 +1,6 @@
 " Aliases
+let mapleader = "<space>"
+
 cnoreabbrev bd BD
 cnoreabbrev W w
 

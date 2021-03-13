@@ -19,6 +19,7 @@ set smartcase
 set incsearch
 set undodir=~/.vim/undodir
 set undofile
+" set undolevels=10000
 set autoread " Auto Refresh
 set signcolumn=yes
 set completeopt=menu " To avoid annoying vertical split

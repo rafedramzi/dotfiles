@@ -81,6 +81,8 @@ call plug#begin('~/.vim/plugged')
       "}}}
       "{{{ OTHERs
       Plug 'hashivim/vim-terraform'
+      Plug 'simnalamburt/vim-mundo'
+      Plug 'simeji/winresizer' " Most useful!
 
 
       Plug 'vimwiki/vimwiki'
