@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Firefox - Profile Manager
+Type=Application
+Icon=firefox
+Terminal=false
+X-MultipleArgs=false
+Categories=Network;WebBrowser;
+Actions=new-window;new-private-window;
+Exec=/usr/bin/firefox --ProfileManager
