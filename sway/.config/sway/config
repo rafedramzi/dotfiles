@@ -77,6 +77,9 @@ output eDP1 pos 1366 0 res 1600x900
     bindsym $mod+d exec $menu
     bindsym $mod+shift+d exec $alt_menu
 
+    bindsym $mod+x move workspace to output left
+    bindsym $mod+Tab workspace back_and_forth
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
