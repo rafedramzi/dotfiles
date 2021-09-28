@@ -2,7 +2,7 @@ alias susr="systemctl --user"
 alias rust-repl="evcxr"
 
 
-alias ls='exa'
+alias ls='exa -g'
 alias l='exa -lgahbF'
 alias ll='exa -lgbhF'
 alias llm='exa -algbF --sort=modified'

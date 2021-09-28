@@ -35,10 +35,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 #exec --no-startup-id octopi-notifier
-exec --no-startup-id ~/.screenlayout/Home-right.sh
+#exec --no-startup-id ~/.screenlayout/Home-right.sh
 ##exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon
 exec --no-startup-id dunst
-exec --no-startup-id albert
+#exec --no-startup-id albert
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -244,7 +244,7 @@ exec --no-startup-id /usr/bin/gnome-screensaver
 # }}}
 #exec --no-startup-id variety
 exec --no-startup-id ~/.fehbg
-exec --no-startup-id picom
+exec --no-startup-id picom -CG --xrender-sync-fence
 #exec --no-startup-id xcompmgr
 
 

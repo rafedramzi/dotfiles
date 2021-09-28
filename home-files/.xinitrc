@@ -6,7 +6,7 @@ sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
 #xset r rate 200 30
-xset r rate 500 30
+#xset r rate 500 30
 
 
 

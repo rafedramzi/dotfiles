@@ -5,6 +5,7 @@ After=network.target
 [Service]
 # Systemd Specifiers: https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Specifiers
 Environment="JUPYTERNOTEBOOK_DIR=%h/Projects/jupyter/notebook"
+Environment="JUPYTER_CONFIG_DIR=%h/.config/jupyter"
 ExecStart=/bin/python /usr/bin/jupyter-notebook --notebook-dir=${JUPYTERNOTEBOOK_DIR}
 
 [Install]

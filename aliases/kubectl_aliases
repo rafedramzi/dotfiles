@@ -14,7 +14,8 @@
 
 alias k='kubectl'
 alias ksys='kubectl --namespace=kube-system'
-alias ka='kubectl apply --recursive -f'
+alias ka='kubectl apply --recursive'
+alias kaf='kubectl apply --recursive -f'
 alias ksysa='kubectl --namespace=kube-system apply --recursive -f'
 #alias kak='kubectl apply -k'
 alias kk='kubectl kustomize'

@@ -345,6 +345,7 @@ format-underline = #1db954
 
 [module/quote]
 type = custom/script
-exec = ~/.config/polybar/quote.sh
+#exec = ~/.config/polybar/quote.sh
+exec = 
 interval = 60
 ; vim:ft=dosini
