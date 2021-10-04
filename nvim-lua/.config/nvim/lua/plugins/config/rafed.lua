@@ -1,12 +1,12 @@
 local cmd = vim.cmd
+local g = vim.g
+g.mapleader=' '
 cmd[[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting()]]
 
 -- Vim Command
 cmd([[
   " Settings
-  "set autochdir
-  "set listchars=nbsp:␣,eol:↲,tab:»\ ,extends:›,precedes:‹,trail:•
-  let mapleader=" "
+  "set autochdir "set listchars=nbsp:␣,eol:↲,tab:»\ ,extends:›,precedes:‹,trail:•
   set autoread " Auto Refresh set completeopt=menuone,noselect
   set expandtab
   set foldlevel=99
@@ -49,13 +49,10 @@ cmd([[
 ]])
 
 -- Sortcuts
-vim.api.nvim_set_keymap('n', '<leader>ne', ':NERDTreeTabsToggle<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>nr', ':NERDTreeFind<cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeToggle<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 
--- colorscheme challenger_deep
-vim.g.colors_name = "challenger_deep"
+g.colors_name = "challenger_deep"
 vim.opt.list = true
 vim.opt.listchars = {
     space = "⋅",

@@ -52,7 +52,12 @@ return require('packer').startup(function()
   
   --  File Tree
   -- use {'kyazdani42/nvim-web-devicons'}
-  -- use {'kyazdani42/nvim-tree.lua'}
+  
+  use {
+      'kyazdani42/nvim-tree.lua',
+      requires = 'kyazdani42/nvim-web-devicons',
+      config = function() require'nvim-tree'.setup {} end
+  }
   -- nmap <leader>ne :NvimTreeToggle<cr>
   -- nmap <leader>nr :NvimTreeFindFile<cr>
   -- nmap <F3> :NvimTreeToggle<cr>
@@ -60,10 +65,9 @@ return require('packer').startup(function()
   -- use {'nvim-telescope/telescope-dap.nvim'}
   -- use {'mfussenegger/nvim-dap'}
   --
-  --
+  
   -- Below general vim plugin
   use ('editorconfig/editorconfig-vim')
-  use ('preservim/nerdtree')
 
   -- Themes
   -- " Theme
