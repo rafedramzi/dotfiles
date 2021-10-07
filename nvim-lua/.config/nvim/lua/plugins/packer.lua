@@ -61,9 +61,9 @@ return require('packer').startup(function()
   -- nmap <leader>ne :NvimTreeToggle<cr>
   -- nmap <leader>nr :NvimTreeFindFile<cr>
   -- nmap <F3> :NvimTreeToggle<cr>
-  -- " Debugging
-  -- use {'nvim-telescope/telescope-dap.nvim'}
-  -- use {'mfussenegger/nvim-dap'}
+  -- Debugging
+  use {'nvim-telescope/telescope-dap.nvim'}
+  use {'mfussenegger/nvim-dap'}
   --
   
   -- Below general vim plugin

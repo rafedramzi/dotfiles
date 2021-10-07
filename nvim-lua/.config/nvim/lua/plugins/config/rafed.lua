@@ -57,6 +57,7 @@ vim.opt.list = true
 vim.opt.listchars = {
     space = "⋅",
     eol = "↴",
+    tab = "»\\ ",
 }
 
 require("indent_blankline").setup {
