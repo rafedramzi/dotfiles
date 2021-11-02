@@ -34,24 +34,31 @@ return require('packer').startup(function()
 
   -- Fuzzy Finder
   use { 'nvim-lua/popup.nvim' }
-  use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }}
+  use { 'nvim-telescope/telescope.nvim', requires = {
+    {'nvim-lua/plenary.nvim'}
+  }}
+  use {'nvim-telescope/telescope-fzy-native.nvim' }
 
   -- LSP
   use {'neovim/nvim-lspconfig'}
+  use {'simrat39/rust-tools.nvim'}
+
   -- Auto Complete
-  use {'hrsh7th/nvim-compe'}
+  use {'hrsh7th/nvim-cmp'} -- Autocompletion plugin
+  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+  use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+  use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
   -- Airline
-  -- use {
-  --   'glepnir/galaxyline.nvim', branch = 'main', config = function() require'statusline' end,
-  --   requires = {'kyazdani42/nvim-web-devicons'}
-  -- }
+  use {
+    'glepnir/galaxyline.nvim',
+      branch = 'main',
+      -- your statusline
+      config = function() require'plugins.config.galaxyline' end,
+      -- some optional icons
+      requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
 
-  -- More at https://github.com/glepnir/galaxyline.nvim/issues/12
-  --
-  
-  --  File Tree
-  -- use {'kyazdani42/nvim-web-devicons'}
   
   use {
       'kyazdani42/nvim-tree.lua',
@@ -77,6 +84,10 @@ return require('packer').startup(function()
   use {'challenger-deep-theme/vim'}
   use {'rigellute/rigel'}
 
+
+  -- Buffer
+  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, tag = 'release'}
+  
 
   -- " TODO: This indent-blankline is really cool! if you have the time to rice your nvim, definiitely take alook at this plugin
   use {'lukas-reineke/indent-blankline.nvim'}
