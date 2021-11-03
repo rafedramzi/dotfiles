@@ -7,8 +7,10 @@ require('plugins.config.shortcuts')
 require('plugins.config.tree-sitter')
 require('plugins.config.dap-go')
 require('plugins.config.telescope')
+
+-- TODO: Lazy loading module nvchad l ike
 require('gitsigns').setup()
- 
+require('telescope').load_extension('projects')
 
 -- vim.g.colors_name = "challenger_deep"
 -- 

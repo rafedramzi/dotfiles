@@ -63,7 +63,13 @@ return require('packer').startup(function()
   use {
       'kyazdani42/nvim-tree.lua',
       requires = 'kyazdani42/nvim-web-devicons',
-      config = function() require'nvim-tree'.setup {} end
+      config = function() require'nvim-tree'.setup {
+        update_cwd = true,
+        update_focused_file = {
+          enable = true,
+          update_cwd = true
+        },
+      } end
   }
   -- nmap <leader>ne :NvimTreeToggle<cr>
   -- nmap <leader>nr :NvimTreeFindFile<cr>
@@ -88,7 +94,17 @@ return require('packer').startup(function()
   -- Buffer
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, tag = 'release'}
   
-
+  --- Project Manager
+  use { "ahmedkhalf/project.nvim",
+        config = function()
+          require("project_nvim").setup {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+            show_hidden = true,
+          }
+        end
+  }
   -- " TODO: This indent-blankline is really cool! if you have the time to rice your nvim, definiitely take alook at this plugin
   use {'lukas-reineke/indent-blankline.nvim'}
 
