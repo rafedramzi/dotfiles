@@ -17,8 +17,9 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- Simple plugins can be specified as strings
-  use '9mm/vim-closer'
+  -- Note: vim-closer is plugin disabled due to always appending
+  -- braces after the new line, pretty annoying, left here for future reference
+  -- use '9mm/vim-closer'
 
   -- Lazy loading:
   -- Load on specific commands
@@ -63,13 +64,16 @@ return require('packer').startup(function()
   use {
       'kyazdani42/nvim-tree.lua',
       requires = 'kyazdani42/nvim-web-devicons',
-      config = function() require'nvim-tree'.setup {
-        update_cwd = true,
-        update_focused_file = {
-          enable = true,
-          update_cwd = true
-        },
-      } end
+      config = function()
+        vim.g.nvim_tree_respect_buf_cwd = 1
+        require'nvim-tree'.setup {
+          update_cwd = false,
+          update_focused_file = {
+            enable = false,
+            update_cwd = false
+          },
+        }
+      end
   }
   -- nmap <leader>ne :NvimTreeToggle<cr>
   -- nmap <leader>nr :NvimTreeFindFile<cr>
