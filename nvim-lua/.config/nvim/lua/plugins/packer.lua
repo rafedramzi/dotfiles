@@ -88,9 +88,9 @@ return require('packer').startup(function()
 
   -- Themes
   -- " Theme
-  -- "use ('NLKNguyen/papercolor-theme')
   -- "use ('rakr/vim-one')
   -- "use ('bluz71/vim-nightfly-guicolors')
+  use {'NLKNguyen/papercolor-theme'}
   use {'challenger-deep-theme/vim'}
   use {'rigellute/rigel'}
 

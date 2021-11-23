@@ -40,7 +40,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'jsonls' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     -- on_attach = my_custom_on_attach,
@@ -48,10 +48,24 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-nvim_lsp["gopls"].setup {
+nvim_lsp["jsonls"].setup {
   on_attach = on_attach,
-  flags = {
-    debounce_text_changes = 150,
+  cmd = { "/usr/bin/vscode-json-languageserver", '--stdio' },
+}
+
+nvim_lsp["gopls"].setup {
+  -- flags = {
+  --   debounce_text_changes = 150,
+  -- },
+  on_attach = on_attach,
+  cmd = {"gopls", "serve"},
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+    },
   }
 }
 
