@@ -59,6 +59,17 @@ return require('packer').startup(function()
       -- some optional icons
       requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
   
   use {
@@ -92,6 +103,11 @@ return require('packer').startup(function()
   -- "use ('bluz71/vim-nightfly-guicolors')
   use {'NLKNguyen/papercolor-theme'}
   use {'challenger-deep-theme/vim'}
+  use {'dracula/vim', as = 'dracula'}
+  use {'sainnhe/sonokai'}
+  use {'haishanh/night-owl.vim'}
+  use {'lifepillar/vim-gruvbox8'}
+  use {'sainnhe/everforest'}
   use {'rigellute/rigel'}
 
 

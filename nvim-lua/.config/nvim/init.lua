@@ -14,8 +14,8 @@ require('telescope').load_extension('projects')
 
 -- vim.g.colors_name = "challenger_deep"
 -- 
--- vim.cmd("colorscheme challenger_deep")
-vim.cmd("colorscheme PaperColor")
+vim.cmd("colorscheme challenger_deep")
+-- vim.cmd("colorscheme PaperColor")
 vim.cmd([[set guifont=JetBrains\ Mono:12]])
 -- For auto reload file to buffer
 vim.cmd([[set autoread | au CursorHold * checktime | call feedkeys("lh")]])
