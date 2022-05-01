@@ -49,7 +49,6 @@ cmd([[
 ]])
 
 -- Sortcuts
-vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 
 g.colors_name = "challenger_deep"

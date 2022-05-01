@@ -51,14 +51,15 @@ return require('packer').startup(function()
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
   -- Airline
-  use {
-    'glepnir/galaxyline.nvim',
-      branch = 'main',
-      -- your statusline
-      config = function() require'plugins.config.galaxyline' end,
-      -- some optional icons
-      requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
+  -- use {
+  --   'glepnir/galaxyline.nvim',
+  --     branch = 'main',
+  --     -- your statusline
+  --     config = function() require'plugins.config.galaxyline' end,
+  --     -- some optional icons
+  --     requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  -- }
+  use 'feline-nvim/feline.nvim'
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
@@ -86,6 +87,12 @@ return require('packer').startup(function()
         }
       end
   }
+  use {'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
+
   -- nmap <leader>ne :NvimTreeToggle<cr>
   -- nmap <leader>nr :NvimTreeFindFile<cr>
   -- nmap <F3> :NvimTreeToggle<cr>
@@ -109,7 +116,25 @@ return require('packer').startup(function()
   use {'lifepillar/vim-gruvbox8'}
   use {'sainnhe/everforest'}
   use {'rigellute/rigel'}
+  use {'folke/tokyonight.nvim'}
+  vim.g.tokyonight_style = "night"
 
+  use {'<S-Del>jacoborus/tender.vim'}
+  use {'EdenEast/nightfox.nvim'} -- Packer
+
+
+  -- Others
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
   -- Buffer
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' }, tag = 'release'}
@@ -132,5 +157,15 @@ return require('packer').startup(function()
   --"Plug 'roxma/nvim-completion-manager'
   --"Plug 'SirVer/ultisnips'
   --"Plug 'honza/vim-snippets'
+  -- snippets & annotatoins
+  use {
+    "danymat/neogen",
+    config = function()
+        require('neogen').setup {
+            enabled = true
+        }
+    end,
+    requires = "nvim-treesitter/nvim-treesitter"
+  }
 end)
 

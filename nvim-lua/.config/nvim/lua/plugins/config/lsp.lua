@@ -1,6 +1,7 @@
 -- LSP Config: check https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#gopls for full configuration
 -- Standard nvim-lsp config
 local nvim_lsp = require('lspconfig')
+local util = nvim_lsp.util
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -47,6 +48,23 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+
+nvim_lsp.sumneko_lua.setup {
+    cmd = { "lua-language-server" },
+    filetypes = { "lua" },
+    log_level = 2,
+    root_dir = util.root_pattern("init.lua") or util.root_pattern(".git") or bufdir,
+    settings = {
+      Lua = {
+        telemetry = {
+          enable = false,
+        }
+      }
+    },
+    single_file_support = true,
+}
+
 
 nvim_lsp["jsonls"].setup {
   on_attach = on_attach,
