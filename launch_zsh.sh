@@ -57,3 +57,5 @@ eval "$(direnv hook zsh)"
 
 # ZSH OPTIONS
 setopt HIST_IGNORE_SPACE # don't store comand beings with space
+#source <(kubectl completion zsh)
+

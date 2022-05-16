@@ -47,8 +47,8 @@ set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod
 
 # start a terminal
+#bindsym $mod+Return exec TERMINAL=alacritty i3-sensible-terminal
 bindsym $mod+Return exec TERMINAL=alacritty i3-sensible-terminal
-#bindsym $mod+Return exec TERMINAL=kitty i3-sensible-terminal
 bindsym $mod+Tab workspace back_and_forth
 
 # kill focused window
@@ -244,7 +244,7 @@ exec --no-startup-id /usr/bin/gnome-screensaver
 # }}}
 #exec --no-startup-id variety
 exec --no-startup-id ~/.fehbg
-exec --no-startup-id picom -CG --xrender-sync-fence
+exec --no-startup-id picom 
 #exec --no-startup-id xcompmgr
 
 
@@ -288,7 +288,6 @@ assign [class="^Discord"] $ws13
 assign [class="^Station"] $ws13
 assign [class="^Mailspring"] $ws13
 #Note Writing
-assign [class="^Boostnote"] $ws14
 assign [class="^zettlr"] $ws14
 # 17 - Stuff
 assign [class="^GNU\ Octave"] $ws17

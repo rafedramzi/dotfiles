@@ -1,6 +1,5 @@
 #!/bin/sh
 reflector \
-  --country Indonesia \
   --country China \
   --country Singapore \
   --country Japan \

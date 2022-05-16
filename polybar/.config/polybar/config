@@ -127,6 +127,26 @@ format-foreground = ${colors.foreground}
 label = %date% %time%
 
 
+
+[module/volume-bluetooth]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = bluez_sink.14_3F_A6_89_1F_7F.a2dp_sink
+
+format-volume = 🎧<label-volume><ramp-volume>
+format-muted-prefix = "🎧 "
+label-volume = "%percentage%"
+ramp-volume-0 =" "
+ramp-volume-1 =" "
+ramp-volume-2 =" "
+ramp-volume-3 =" "
+
+label-volume-foreground = ${colors.foreground}
+format-muted-foreground = ${colors.alert}
+label-muted-foreground = ${colors.alert}
+
 [module/volume]
 type = internal/pulseaudio
 
@@ -345,7 +365,6 @@ format-underline = #1db954
 
 [module/quote]
 type = custom/script
-#exec = ~/.config/polybar/quote.sh
-exec = 
+exec = ~/.config/polybar/quote.sh
 interval = 60
 ; vim:ft=dosini

@@ -12,7 +12,12 @@
 # available, otherwise `xterm-256color` is used.
 #TERM: xterm-256color
 
-#window:
+window:
+# Background opacity
+#
+# Window opacity as a floating point number from `0.0` to `1.0`.
+# The value `0.0` is completely transparent and `1.0` is opaque.
+  opacity: 0.92
 # Window dimensions (changes require restart)
 #
 # Specified in number of columns/lines, not pixels.
@@ -109,9 +114,14 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    family: Cascadia Code
-    #family: Iosevka Nerd Font
+    #family: Fira Code
+    #family: Cascadia Code
+    #family: Iosevka
+    family: monaco
+    #family: Jetbrains Mono
     #family: Victor Mono
+    #family: Monoid
+    #family: Iosevka Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -122,7 +132,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Cascadia Code
+    #family: Cascadia Code
     #family: Monoid
     #family: Iosevka Nerd Font
     #family: Victor Mono
@@ -136,7 +146,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Cascadia Code
+    #family: Cascadia Code
     #family: Monoid
     #family: Iosevka Nerd Font
     #family: Victor Mono
@@ -154,7 +164,7 @@ font:
   # The `style` can be specified to pick a specific face.
   #style: Bold Italic
   # Point size
-  size: 14
+  size: 10
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   #offset:
@@ -286,12 +296,6 @@ draw_bold_text_with_bright_colors: false
 #  animation: EaseOutExpo
 #  duration: 0
 #  color: '0xffffff'
-
-# Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.92
 
 #selection:
 #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
