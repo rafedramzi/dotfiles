@@ -18,8 +18,8 @@ require('keymap')
 
 -- vim.g.colors_name = "challenger_deep"
 -- 
-vim.cmd([[colorscheme tokyonight]])
-vim.cmd([[set guifont=JetBrains\ Mono:10]])
+vim.cmd([[colorscheme nightfox]])
+vim.cmd([[set guifont=Fira\ Code:h12]])
 -- For auto reload file to buffer
 vim.cmd([[set autoread | au CursorHold * checktime | call feedkeys("lh")]])
 
@@ -55,25 +55,20 @@ vim.cmd([[
     autocmd BufWritePre *.go lua OrgImports(1000)
   augroup END
   autocmd FileType go setlocal omnifunc=v:lua.vim.lsp.omnifunc
+  " To make background transparent
+  "highlight Normal ctermbg=none guibg=none
 ]])
 
 
 -- Neovide settings
--- vim.cmd([[
---   let g:neovide_cursor_antialiasing=v:true
---   let g:neovide_cursor_animation_length=0
--- 
---   "Ctrl+v system clipboard
---   nmap <c-c> "+y
---   vmap <c-c> "+y
---   nmap <c-v> "+p
---   inoremap <c-v> <c-r>+
---   cnoremap <c-v> <c-r>+
---   " use <c-r> to insert original character without triggering things like auto-pairs
---   inoremap <c-r> <c-v>
---        
---   let &showbreak='↳ '
---   set cpoptions-=n
--- 
--- ]])
+vim.cmd([[
+  let g:neovide_cursor_antialiasing=v:true
+  let g:neovide_cursor_animation_length=0
+  let g:neovide_transparency=0.95
+
+  "Ctrl+v system clipboard
+  let &showbreak='↳ '
+  set cpoptions-=n
+
+]])
 
