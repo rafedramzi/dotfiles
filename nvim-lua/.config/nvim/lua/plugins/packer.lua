@@ -124,6 +124,7 @@ return require('packer').startup(function()
 
 
   -- Others
+  use {'junegunn/vim-easy-align'}
   use {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
